@@ -367,8 +367,7 @@
       this.ctx.lineTo(x, y);
       this.ctx.lineTo(endX, endY);
       this.ctx.fill();
-      console.log('dddd' , centerX / 4 - 12, this.canvas.height - 9);      
-      console.log('maximum', centerX + (centerX / 2) + 12 - 15, this.canvas.height - 9)
+      
       this.ctx.font = this.ctx.font.replace(/\d+px/, "16px");      
       this.ctx.fillText("Minimum", centerX / 4 - 12, this.canvas.height - 9);
       this.ctx.fillText("Maximum", centerX + (centerX / 2) + 12 - 15, this.canvas.height - 9);
@@ -382,6 +381,8 @@
         this.ctx.drawImage(this.img, -imgX / 2, -imgY / 2, imgX, imgY);
         return this.ctx.restore();
       }
+
+      return this.ctx.fill();
     };
 
     return GaugePointer;

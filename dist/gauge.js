@@ -348,8 +348,10 @@
     };
 
     GaugePointer.prototype.render = function() {
-      var angle, endX, endY, imgX, imgY, startX, startY, x, y;
+      var angle, centerX, centerY, endX, endY, imgX, imgY, startX, startY, x, y;
       angle = this.gauge.getAngle.call(this, this.displayedValue);
+      centerX = this.canvas.width / 2;
+      centerY = this.canvas.height * 0.9;
       x = Math.round(this.length * Math.cos(angle));
       y = Math.round(this.length * Math.sin(angle));
       startX = Math.round(this.strokeWidth * Math.cos(angle - Math.PI / 2));
@@ -365,6 +367,11 @@
       this.ctx.lineTo(x, y);
       this.ctx.lineTo(endX, endY);
       this.ctx.fill();
+
+      this.ctx.font = this.ctx.font.replace(/\d+px/, "16px");
+      this.ctx.fillText("Minimum", centerX / 4 - 12, this.canvas.height - 9);
+      this.ctx.fillText("Maximum", centerX + (centerX / 2) + 12 - 15, this.canvas.height - 9);
+
       if (this.img) {
         imgX = Math.round(this.img.width * this.options.iconScale);
         imgY = Math.round(this.img.height * this.options.iconScale);

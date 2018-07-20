@@ -368,7 +368,7 @@
       this.ctx.lineTo(endX, endY);
       this.ctx.fill();
       
-      this.ctx.font = this.ctx.font.replace(/\d+px/, "16px");            
+      //this.ctx.font = this.ctx.font.replace(/\d+px/, "16px");            
       this.ctx.fillText("Minimum", centerX / 4 - 12, this.canvas.height - 9);
       this.ctx.fillText("Maximum", centerX + (centerX / 2) + 12 - 15, this.canvas.height - 9);
       this.ctx.fill();

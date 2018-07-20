@@ -355,7 +355,7 @@
       this.ctx.fillStyle = this.options.color;
       // 아래 동그라미 그리기
       this.ctx.beginPath();
-      this.ctx.arc(centerX, centerY, this.strokeWidth, 0, Math.PI * 2 + 10, true);
+      this.ctx.arc(centerX, centerY, this.strokeWidth + 10, 0, Math.PI * 2, true);
       this.ctx.fill();
 
       // 라인 그리기 (스트로크)

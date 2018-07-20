@@ -369,6 +369,8 @@
       this.ctx.fill();
       
       this.ctx.font = this.ctx.font.replace(/\d+px/, "16px");      
+      console.log(centerX / 4 - 12, this.canvas.height - 9);
+      console.log(centerX + (centerX / 2) + 12 - 15, this.canvas.height - 9);
       this.ctx.fillText("Minimum", centerX / 4 - 12, this.canvas.height - 9);
       this.ctx.fillText("Maximum", centerX + (centerX / 2) + 12 - 15, this.canvas.height - 9);
 

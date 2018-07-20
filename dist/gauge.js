@@ -355,7 +355,7 @@
       this.ctx.fillStyle = this.options.color;
       // 아래 동그라미 그리기
       this.ctx.beginPath();
-      this.ctx.arc(centerX, centerY, this.strokeWidth, 0, Math.PI * 2, true);
+      this.ctx.arc(centerX, centerY, this.strokeWidth, 0, Math.PI * 2 + 10, true);
       this.ctx.fill();
 
       // 라인 그리기 (스트로크)
@@ -370,7 +370,7 @@
       this.ctx.font = this.ctx.font.replace(/\d+px/, "16px");
       //this.ctx.font = this.ctx.font.replace(/\d+px/, (parseInt(this.ctx.font.match(/\d+px/)) + 2) + "px");
       this.ctx.fillText("Minimum", centerX / 4 - 12, this.canvas.height - 9);
-      this.ctx.fillText("Maximum", centerX + (centerX / 2) + 12 - 15, this.canvas.height - 9);
+      this.ctx.fillText("Maximum", centerX + (centerX / 2) + 14 - 15, this.canvas.height - 9);
 
       // 스트로크 안에 동그라미
       this.ctx.fillStyle = "#eeeeee";
